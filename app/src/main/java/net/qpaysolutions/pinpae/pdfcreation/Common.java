@@ -7,14 +7,13 @@ import java.io.File;
 
 public class Common {
     public static String getAppPath(Context context) {
-        File dir = new File(Environment.getExternalStorageDirectory().getAbsolutePath()
+        File dir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
                 + File.separator
-                + context.getResources().getString(R.string.app_name)
+                + "app_pdf"
                 + File.separator
         );
-        if (!dir.exists()) {
+        if (!dir.exists())
             dir.mkdir();
-        }
         return dir.getPath() + File.separator;
     }
 }

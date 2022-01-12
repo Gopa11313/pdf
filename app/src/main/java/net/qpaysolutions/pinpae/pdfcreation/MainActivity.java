@@ -94,10 +94,10 @@ public class MainActivity extends AppCompatActivity {
             document.addCreator("Gopal Thapa");
             BaseColor colorAgent = new BaseColor(0, 153, 204, 255);
             float fontsize = 20.0f;
-            float valueFontSize = 26.0f;
+            float valueFontSize = 16.0f;
 
-            BaseFont baseFont = BaseFont.createFont("assests/font/brandon_medium.otf", "UTF-8", BaseFont.EMBEDDED);
-            Font titleFont = new Font(baseFont, 36.0f, Font.NORMAL, BaseColor.BLACK);
+            BaseFont baseFont = BaseFont.createFont(BaseFont.HELVETICA_BOLD, BaseFont.WINANSI, BaseFont.EMBEDDED);
+            Font titleFont = new Font(baseFont, 26.0f, Font.NORMAL, BaseColor.BLACK);
             addNewItem(document, "order Details", Element.ALIGN_CENTER, titleFont);
 
             Font orderNumberFont = new Font(baseFont, valueFontSize, Font.NORMAL, colorAgent);
